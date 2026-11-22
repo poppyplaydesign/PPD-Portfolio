@@ -141,12 +141,11 @@ h1, h2, h3, h4 {
   gap: 0.5rem;
 }
 
-.logo .dot {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--purple), var(--orange));
+.logo-img {
+  height: 28px;
+  width: auto;
   display: inline-block;
+  vertical-align: middle;
 }
 
 .nav-links {
@@ -757,6 +756,60 @@ h1, h2, h3, h4 {
   font-size: 0.95rem;
   max-width: 480px;
   text-align: right;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Project photo grid                                                     */
+/* ---------------------------------------------------------------------- */
+
+.hero-image-section {
+  padding: 3rem 0 3rem;
+}
+
+.hero-image-section img {
+  width: 100%;
+  height: auto;
+  display: block;
+  mix-blend-mode: multiply;
+}
+
+.hero-image-section .photo-caption {
+  text-align: center;
+}
+
+.photo-grid-section {
+  padding: 4rem 0 4rem;
+  border-top: 1px solid var(--line);
+}
+
+.photo-grid-section .section-label {
+  margin-bottom: 2rem;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
+}
+
+.photo-grid-item img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-caption {
+  margin-top: 0.6rem;
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .next-project {
